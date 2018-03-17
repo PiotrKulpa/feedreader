@@ -22,8 +22,8 @@ $(function() {
          * page?
          */
         it('are defined', function() {
-            expect(allFeeds).toBeDefined();
-            expect(allFeeds.length).not.toBe(0);
+          expect(allFeeds).toBeDefined();
+          expect(allFeeds.length).not.toBe(0);
         });
 
 
@@ -34,7 +34,7 @@ $(function() {
            allFeeds.map(function(el, i) {
              it('URL ' + i +' is defined and not empty', function() {
                expect(el.url).toBeDefined();
-                expect(el.url.length).not.toBe(0);
+               expect(el.url.length).not.toBe(0);
              });
            });
 
@@ -54,8 +54,7 @@ $(function() {
 
     /* TODO: Write a new test suite named "The menu" */
     describe('The menu', function() {
-      var counter = 0,
-          menuIconTest;
+      var menuIconTest;
 
       beforeEach(function() {
         menuIconTest = $('.menu-icon-link');
@@ -79,13 +78,13 @@ $(function() {
 
             it("Menu display when clicked", function() {
               menuIconTest.click();
-                expect(document.getElementsByTagName("body")[0].className).not.toEqual("menu-hidden");
+              expect(document.getElementsByTagName("body")[0].className).not.toEqual("menu-hidden");
             });
 
 
               it("Menu hide when clicked again", function() {
                 menuIconTest.click();
-                  expect(document.getElementsByTagName("body")[0].className).toEqual("menu-hidden");
+                expect(document.getElementsByTagName("body")[0].className).toEqual("menu-hidden");
               });
 
     });
@@ -110,12 +109,12 @@ $(function() {
         });
 
          it("There is at least a single .entry element within the .feed container.", function(done) {
-
-           console.log(entry);
            expect(entry.length).toBeGreaterThan(0);
            done();
          });
+
      });
+
     /* TODO: Write a new test suite named "New Feed Selection" */
     describe('New Feed Selection', function() {
         /* TODO: Write a test that ensures when a new feed is loaded
